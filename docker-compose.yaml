@@ -1,0 +1,10 @@
+services:
+  lora_simulator:
+    build: .
+    volumes:
+      - .:/app
+      - ./results:/output
+    working_dir: /app
+    entrypoint: ["python", "./main.py"]
+    stdin_open: true
+    tty: true
